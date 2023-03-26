@@ -1,0 +1,12 @@
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col" *ngFor="let news of newsListed">
+    <div class="card">
+      <img src="/prueba-tecnica/src/assets/newsapi.webp" class="card-img-top" alt="image" />
+      <div class="card-body">
+        <h5 class="card-title">{{news.title}}</h5>
+        <p class="card-text">{{news.content}}</p>
+      </div>
+    </div>
+    <a [href]="news.url" target="_blank" class="btn btn-primary btn-block">+ INFO</a>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="jumbotron mt-5">
+  <h2 class="heading">Filter NEWS</h2>
+  <div class="row">
+    <div class="col-lg-8 offset lg-2">
+      <form (ngSubmit)="searchNew()">
+        <div class="form-group">
+          <label for="exampleSelect2" class="form-label mt-4">Category</label>
+          <select
+            class="form-select form-select-lg"
+            name="Category"
+            [(ngModel)]="selectedCategory"
+          >
+            <option
+              *ngFor="let category of categories"
+              [value]="category.value"
+            >
+              {{ category.name }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleSelect2" class="form-label mt-4">Country</label>
+          <select
+            class="form-select form-select-lg"
+            name="Country"
+            [(ngModel)]="selectedCountry"
+          >
+            <option *ngFor="let country of countries" [value]="country.value">
+              {{ country.name }}
+            </option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">
+          SEARCH
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
