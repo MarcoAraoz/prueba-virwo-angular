@@ -1,0 +1,50 @@
+<form
+  class="container"
+  style="padding: 5rem"
+  [formGroup]="UserRegistrationForm"
+  (ngSubmit)="OnSubmit()"
+>
+  <fieldset>
+    <legend style="text-align: center">SignUp User</legend>
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label mt-4">User</label>
+      <input
+        type="text"
+        class="form-control"
+        id="InputUser"
+        placeholder="User Name"
+        formControlName="username"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="form-label mt-4"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="InputEmail"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        formControlName="email"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your email with anyone else.</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label mt-4"
+        >Password</label
+      >
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+        formControlName="password"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary" type="submit">Submit</button>
+  </fieldset>
+</form>
