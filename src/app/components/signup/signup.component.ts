@@ -19,7 +19,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
   OnSubmit() {
     if(this.UserRegistrationForm.valid && this.UserRegistrationForm.value.password) {
-      console.log('User Form value is: ', this.UserRegistrationForm.value);
+      console.log('Signup data: ', this.UserRegistrationForm.value);
     } else {
       console.log('Acces denied');
       
